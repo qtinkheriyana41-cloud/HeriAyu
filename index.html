@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.replace("no-js","js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HeriAyu — Petualangan Kecil, Hati Besar</title>
+<meta name="description" content="HeriAyu adalah dunia cerita pendek animasi Indonesia untuk anak dan keluarga, menghadirkan petualangan Heri dan Ayu yang menghibur sekaligus menemani tumbuh bersama.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://heriayu.id/">
+<meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1B33'/%3E%3Cpath d='M32 14l4.6 9.4L47 25l-7.5 7.3L41.4 44 32 38.6 22.6 44l1.9-11.7L17 25l10.4-1.6L32 14z' fill='%23F4B843'/%3E%3C/svg%3E" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HeriAyu">
+<meta property="og:title" content="HeriAyu — Petualangan Kecil, Hati Besar">
+<meta property="og:description" content="Cerita pendek animasi yang menghibur, menginspirasi, dan menemani setiap perjalanan tumbuh bersama keluarga.">
+<meta property="og:url" content="https://heriayu.id/">
+<meta property="og:locale" content="id_ID">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HeriAyu — Petualangan Kecil, Hati Besar">
+<meta name="twitter:description" content="Cerita pendek animasi yang menghibur, menginspirasi, dan menemani setiap perjalanan tumbuh bersama keluarga.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HeriAyu",
+  "url": "https://heriayu.id/",
+  "sameAs": ["https://www.youtube.com/@officialheriayu", "https://www.tiktok.com/@officialheriayu"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "HeriAyu",
+  "url": "https://heriayu.id/",
+  "inLanguage": "id-ID"
+}
+</script>
+
+<style>
+/* ============================================================
+   0. DESIGN TOKENS
+   ============================================================ */
+:root{
+  --ink:#0B1B33; --blue-deep:#14356B; --blue-mid:#2C5FC4; --sky:#6FA8F0; --sky-light:#BFDCFA;
+  --gold:#F4B843; --gold-soft:#FFD98A; --gold-deep:#E89A2C; --cream:#FBF7EE; --cream-dim:#F1ECDF; --white:#FFFFFF;
+  --neutral-900:#1B2536; --neutral-700:#43506B; --neutral-500:#66708A; --neutral-300:#C7CDDA; --neutral-200:#E1E4EC;
+  --success:#3FA772; --error:#E1584A; --info:#2C5FC4; --info-bg:#E9F0FD;
+  --font-display:'Fraunces',serif; --font-body:'Plus Jakarta Sans',sans-serif;
+  --text-xs:.75rem; --text-sm:.875rem; --text-base:1rem; --text-lg:1.125rem; --text-xl:1.25rem;
+  --text-2xl:1.5rem; --text-3xl:1.875rem; --text-4xl:2.25rem; --text-5xl:3rem; --text-6xl:3.75rem;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px;
+  --space-10:40px; --space-12:48px; --space-16:64px; --space-20:80px; --space-24:96px;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:20px; --radius-xl:28px; --radius-full:999px;
+  --shadow-sm:0 1px 3px rgba(11,27,51,.08),0 1px 2px rgba(11,27,51,.06);
+  --shadow-md:0 6px 16px rgba(11,27,51,.10),0 2px 6px rgba(11,27,51,.06);
+  --shadow-lg:0 16px 32px rgba(11,27,51,.14),0 4px 10px rgba(11,27,51,.08);
+  --shadow-xl:0 28px 56px rgba(11,27,51,.20);
+  --shadow-glow-gold:0 10px 26px rgba(244,184,67,.40);
+  --shadow-glass:0 8px 30px rgba(11,27,51,.18);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --dur-fast:150ms; --dur-base:250ms; --dur-slow:450ms; --dur-scroll:700ms;
+  --container-max:1400px; --gutter:24px; --margin:5vw;
+}
+
+/* ============================================================
+   1. RESET & BASE
+   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:auto;}
+body{font-family:var(--font-body); background:var(--cream); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+button{font-family:inherit; cursor:pointer;}
+ul{list-style:none;}
+h1,h2,h3,h4{font-family:var(--font-display); line-height:1.15; font-weight:600; color:var(--blue-deep);}
+::selection{background:var(--gold-soft); color:var(--ink);}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{outline:2px solid var(--blue-mid); outline-offset:3px; border-radius:4px;}
+@media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important;} }
+
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+.skip-link{position:absolute; top:-100px; left:16px; z-index:999; background:var(--gold); color:var(--ink); font-weight:700; font-size:var(--text-sm); padding:12px 20px; border-radius:var(--radius-sm); transition:top var(--dur-fast) var(--ease);}
+.skip-link:focus{top:16px;}
+
+.container{max-width:var(--container-max); margin:0 auto; padding:0 var(--margin);}
+.section{padding:var(--space-24) 0;}
+.section-tight{padding:var(--space-16) 0;}
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:var(--text-xs); font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--blue-mid); margin-bottom:var(--space-4);}
+.eyebrow.on-dark{color:var(--gold-soft);}
+.eyebrow::before{content:''; width:26px; height:1px; background:currentColor; opacity:.6;}
+.section-head{max-width:60ch; margin-bottom:var(--space-10);}
+#characters .section-head{margin-bottom:var(--space-4);}
+.section-head h2{font-size:var(--text-4xl);}
+.section-head p{margin-top:var(--space-3); color:var(--neutral-700); font-size:var(--text-base);}
+.section-head.centered{margin-left:auto; margin-right:auto; text-align:center;}
+
+/* Reveal-on-scroll: hidden only once JS confirms it can run (html.js) — never a no-JS dead end */
+.js .reveal{opacity:0; transform:translateY(24px); transition:opacity var(--dur-scroll) var(--ease), transform var(--dur-scroll) var(--ease);}
+.js .reveal.is-visible{opacity:1; transform:translateY(0);}
+.js .grid.reveal:not(.is-visible) > *{opacity:0; transform:translateY(18px);}
+.js .grid.reveal > *{transition:opacity var(--dur-scroll) var(--ease), transform var(--dur-scroll) var(--ease);}
+.js .grid.reveal.is-visible > *:nth-child(1){transition-delay:.02s;}
+.js .grid.reveal.is-visible > *:nth-child(2){transition-delay:.08s;}
+.js .grid.reveal.is-visible > *:nth-child(3){transition-delay:.14s;}
+.js .grid.reveal.is-visible > *:nth-child(4){transition-delay:.2s;}
+.js .grid.reveal.is-visible > *:nth-child(5){transition-delay:.26s;}
+.js .grid.reveal.is-visible > *:nth-child(6){transition-delay:.32s;}
+
+.grid{display:grid; gap:var(--space-6);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr);} .grid-3{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+/* ============================================================
+   2. NAVIGATION
+   ============================================================ */
+.nav{position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:22px 5vw; transition:all .45s var(--ease); background:transparent;}
+.nav.scrolled{padding:14px 5vw; background:rgba(11,27,51,.72); backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px) saturate(140%); box-shadow:var(--shadow-glass);}
+.brand{display:flex; align-items:center; position:relative;}
+.brand-logo{height:48px; width:auto; display:block;}
+@media (max-width:640px){.brand-logo{height:38px;}}
+.nav-links{display:flex; align-items:center; gap:30px;}
+.nav-links a{font-size:.92rem; font-weight:600; color:#F4F1EA; opacity:.82; letter-spacing:.01em; position:relative; padding:6px 2px; transition:opacity var(--dur-base);}
+.nav-links a:hover, .nav-links a.active{opacity:1;}
+.nav-links a::after{content:''; position:absolute; left:0; bottom:0; width:0%; height:2px; background:var(--gold); transition:width var(--dur-base) var(--ease);}
+.nav-links a:hover::after, .nav-links a.active::after{width:100%;}
+.nav-cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%); color:var(--ink) !important; padding:11px 22px; border-radius:var(--radius-full); font-weight:700; font-size:.88rem; box-shadow:var(--shadow-glow-gold); opacity:1 !important;}
+.nav-cta::after{display:none;}
+.nav-toggle{display:none;}
+@media (max-width:960px){
+  .nav-links{position:fixed; top:0; right:-100%; width:78%; max-width:340px; height:100vh; background:rgba(11,27,51,.97); backdrop-filter:blur(20px); flex-direction:column; align-items:flex-start; justify-content:center; gap:26px; padding:40px; transition:right var(--dur-slow) var(--ease);}
+  .nav-links.open{right:0;}
+  .nav-toggle{display:flex; flex-direction:column; gap:5px; z-index:210; background:none; border:none; padding:10px;}
+  .nav-toggle span{width:24px; height:2px; background:#fff; border-radius:2px; transition:transform var(--dur-fast), opacity var(--dur-fast);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+}
+
+/* ============================================================
+   3. HERO
+   ============================================================ */
+.hero{position:relative; min-height:100svh; display:flex; align-items:center; overflow:hidden;
+  background:radial-gradient(ellipse 90% 55% at 18% 78%, rgba(255,214,140,.35), transparent 60%),
+    linear-gradient(180deg,#0E2B57 0%,#1C4A8C 32%,#3E76CC 60%,#8FBBEB 82%,#E9F1FB 100%);}
+.hero-inner{position:relative; z-index:2; width:100%; max-width:var(--container-max); margin:0 auto; padding:0 var(--margin); display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:var(--space-6);}
+.hero-copy{padding:var(--space-16) 0;}
+.hero-copy h1{font-size:clamp(2.4rem,4.6vw,4rem); line-height:1.08; color:#fff; text-shadow:0 4px 24px rgba(10,25,50,.35); max-width:11ch;}
+.hero-copy p.sub{margin-top:var(--space-6); font-size:clamp(1rem,1.15vw,1.15rem); line-height:1.7; color:#EAF1FB; max-width:44ch; font-weight:500;}
+.hero-ctas{margin-top:var(--space-10); display:flex; gap:var(--space-4); flex-wrap:wrap;}
+.hero-art{position:relative; height:100%; display:flex; align-items:flex-end; justify-content:center;}
+.hero-art .contact-shadow{
+  position:absolute; bottom:4%; left:50%; transform:translateX(-50%);
+  width:42%; height:34px; border-radius:50%;
+  background:radial-gradient(ellipse, rgba(5,15,35,.38) 0%, rgba(5,15,35,.18) 45%, transparent 75%);
+  filter:blur(6px); z-index:1;
+}
+.hero-art img{
+  position:relative; z-index:2;
+  width:100%; max-width:440px; max-height:76vh; height:auto; object-fit:contain;
+  animation:float 7s ease-in-out infinite;
+  /* Real cutout (background removed) — the characters sit directly in the page's
+     own gradient/lighting instead of carrying a second, mismatched sky with them.
+     A soft contact shadow (above) is the only thing grounding them; no image edge to hide. */
+}
+@keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);}}
+.scroll-hint{position:absolute; bottom:34px; left:var(--margin); z-index:2; display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.75); font-size:.8rem; font-weight:600; letter-spacing:.05em;}
+.scroll-line{width:1px; height:34px; background:linear-gradient(to bottom, rgba(255,255,255,.8), transparent); animation:scrolldown 2s ease-in-out infinite;}
+@keyframes scrolldown{0%{opacity:0; transform:translateY(-6px);} 50%{opacity:1;} 100%{opacity:0; transform:translateY(10px);}}
+@media (max-width:880px){
+  .hero-inner{grid-template-columns:1fr; text-align:center; padding-top:110px;}
+  .hero-copy{padding-top:0;}
+  .hero-copy h1{max-width:none;}
+  .hero-copy p.sub{margin-left:auto; margin-right:auto;}
+  .hero-ctas{justify-content:center;}
+  .hero-art{order:-1; margin-bottom:-10px;}
+  .hero-art img{max-width:58%; max-height:52vh;}
+  .scroll-hint{display:none;}
+}
+
+/* ============================================================
+   4. BUTTONS
+   ============================================================ */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:700; border:none; white-space:nowrap; border-radius:var(--radius-full); transition:transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), background var(--dur-base);}
+.btn-lg{padding:15px 28px; font-size:var(--text-base);}
+.btn-md{padding:12px 22px; font-size:var(--text-sm);}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%); color:var(--ink); box-shadow:var(--shadow-glow-gold);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 32px rgba(244,184,67,.5);}
+.btn-secondary{background:var(--blue-mid); color:#fff; box-shadow:var(--shadow-md);}
+.btn-secondary:hover{background:var(--blue-deep); transform:translateY(-2px);}
+.btn-ghost-dark{background:rgba(255,255,255,.1); color:#fff; border:1.5px solid rgba(255,255,255,.45); backdrop-filter:blur(6px);}
+.btn-ghost-dark:hover{background:rgba(255,255,255,.18); transform:translateY(-2px);}
+.btn-outline{background:transparent; color:var(--blue-mid); border:1.5px solid var(--blue-mid);}
+.btn-outline:hover{background:var(--info-bg);}
+.btn-text{background:transparent; color:var(--blue-mid); padding:8px 4px;}
+.btn-text:hover{color:var(--blue-deep); text-decoration:underline;}
+
+/* ============================================================
+   5. ABOUT
+   ============================================================ */
+.about-split{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-12); align-items:center;}
+.about-split .art{border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-lg); aspect-ratio:4/3; background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));}
+.about-split .art img{width:100%; height:100%; object-fit:cover; object-position:50% 30%;}
+.mv-grid{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);}
+.mv-card{background:var(--white); border-radius:var(--radius-lg); padding:var(--space-10); box-shadow:var(--shadow-lg); border-top:4px solid var(--gold);}
+.mv-card.mission{border-top-color:var(--blue-mid); background:var(--info-bg);}
+.mv-grid .mv-card:nth-child(2){background:#FBF0DC;}
+.mv-card h3{font-size:var(--text-3xl); margin-bottom:var(--space-4);}
+.mv-card p{color:var(--neutral-700); font-size:var(--text-base); line-height:1.7;}
+.value-card{background:var(--white); border-radius:var(--radius-lg); padding:var(--space-6); box-shadow:var(--shadow-sm); border:1px solid var(--neutral-200);}
+.value-card .num{font-family:var(--font-display); font-size:var(--text-3xl); color:var(--gold-deep); margin-bottom:var(--space-2);}
+.value-card h3{font-size:var(--text-lg); margin-bottom:var(--space-2);}
+.value-card p{font-size:var(--text-sm); color:var(--neutral-700);}
+@media (max-width:880px){.about-split{grid-template-columns:1fr;} .mv-grid{grid-template-columns:1fr;}}
+
+/* ============================================================
+   6. CHARACTERS
+   ============================================================ */
+.char-showcase{background:var(--white); border-radius:var(--radius-xl); box-shadow:var(--shadow-md); padding:var(--space-6) var(--space-10); display:grid; grid-template-columns:1fr 1fr; gap:var(--space-16); align-items:start; transition:box-shadow .28s var(--ease), transform .28s var(--ease);}
+.char-showcase:hover{box-shadow:var(--shadow-lg); transform:translateY(-2px);}
+.char-card{display:flex; flex-direction:column; align-items:center; text-align:center;}
+.char-art{position:relative; width:100%; max-width:312px; aspect-ratio:3/5; margin:0 auto var(--space-3); display:flex; align-items:flex-end; justify-content:center;}
+.char-art .contact-shadow{position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:58%; height:24px; border-radius:50%; background:radial-gradient(ellipse, rgba(5,15,35,.28) 0%, rgba(5,15,35,.12) 45%, transparent 75%); filter:blur(5px); z-index:1;}
+.char-art img{position:relative; z-index:2; width:100%; height:auto; max-height:100%; object-fit:contain; transition:transform .28s var(--ease);}
+.char-card:hover .char-art img{transform:scale(1.02);}
+.char-card h3{font-size:var(--text-2xl); margin-top:var(--space-1);}
+.char-card p{color:var(--neutral-700); margin-top:var(--space-1); max-width:32ch;}
+.char-card .btn{margin-top:var(--space-2); transition:filter .25s var(--ease);}
+.char-card .btn:hover{filter:brightness(1.06);}
+.role-tag{display:inline-block; background:var(--info-bg); color:var(--blue-mid); font-size:var(--text-xs); font-weight:700; padding:6px 14px; border-radius:var(--radius-full); margin-bottom:var(--space-3);}
+.role-tag.gold{background:#FBF0DC; color:var(--gold-deep);}
+.trait-list{display:flex; flex-wrap:wrap; gap:var(--space-2); margin:var(--space-5) 0;}
+.trait{background:var(--white); border:1px solid var(--neutral-200); padding:6px 14px; border-radius:var(--radius-full); font-size:var(--text-xs); font-weight:600; color:var(--neutral-700);}
+@media (max-width:880px){.char-showcase{gap:var(--space-10); padding:var(--space-12) var(--space-6);}}
+@media (max-width:640px){.char-showcase{grid-template-columns:1fr; gap:var(--space-12);}}
+
+/* ============================================================
+   7. CARDS (Stories / Gallery)
+   ============================================================ */
+.card{background:var(--white); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md); transition:transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease); border:1px solid var(--neutral-200); display:flex; flex-direction:column; width:100%; text-align:left; font:inherit;}
+.card:hover{transform:translateY(-4px); box-shadow:var(--shadow-lg);}
+.card:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+.card-media{height:170px; background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid)); position:relative; flex-shrink:0;}
+.card-media.gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));}
+.card-badge{position:absolute; top:var(--space-3); left:var(--space-3); background:rgba(11,27,51,.7); color:#fff; font-size:var(--text-xs); font-weight:700; padding:4px 10px; border-radius:var(--radius-full);}
+.card-play{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(11,27,51,.15); opacity:.82; transition:opacity var(--dur-base);}
+.card:hover .card-play, .card:focus-visible .card-play{opacity:1;}
+.card-play span{width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; color:var(--blue-deep); font-size:1.1rem;}
+.card-body{padding:var(--space-5); flex:1; display:flex; flex-direction:column;}
+.card-body h3{font-size:var(--text-lg); margin-bottom:var(--space-2);}
+.card-body p{font-size:var(--text-sm); color:var(--neutral-700); margin-bottom:var(--space-4); flex:1; line-height:1.55; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+.card-meta{display:flex; justify-content:space-between; align-items:center; font-size:var(--text-xs); color:var(--neutral-500); font-weight:600;}
+.card-meta span:last-child{color:var(--blue-mid); font-weight:700;}
+
+.gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-4);}
+.gallery-item{position:relative; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:1/1; box-shadow:var(--shadow-sm); cursor:pointer; border:none; padding:0; margin:0; font:inherit; text-align:left; display:block; width:100%; transition:box-shadow var(--dur-base) var(--ease), transform var(--dur-fast) var(--ease); -webkit-tap-highlight-color:transparent;}
+.gallery-item:focus-visible{outline:3px solid var(--gold); outline-offset:2px; box-shadow:var(--shadow-md);}
+.gallery-item img{width:100%; height:100%; object-fit:cover; transition:transform var(--dur-slow) var(--ease);}
+.gallery-item .ph{width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:var(--text-xs); color:rgba(255,255,255,.9); font-weight:600; text-align:center; padding:var(--space-3);}
+.gallery-item:hover{box-shadow:var(--shadow-md);}
+.gallery-item:hover img, .gallery-item:focus-visible img{transform:scale(1.06);}
+.gallery-item:active{transform:scale(.97); box-shadow:var(--shadow-sm);}
+.gallery-item:active img{transform:scale(1.02);}
+.gallery-item .tag{position:absolute; bottom:var(--space-2); left:var(--space-2); background:rgba(11,27,51,.7); color:#fff; font-size:var(--text-xs); padding:4px 10px; border-radius:var(--radius-full); transition:background var(--dur-base) var(--ease);}
+.gallery-item:hover .tag, .gallery-item:focus-visible .tag{background:rgba(11,27,51,.85);}
+@media (hover:none){.gallery-item:active img{transform:scale(1.06);}}
+@media (max-width:1024px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+
+.pill-filter{display:flex; gap:var(--space-3); flex-wrap:wrap;}
+.pill{padding:12px 18px; min-height:44px; display:inline-flex; align-items:center; border-radius:var(--radius-full); background:var(--white); border:1.5px solid var(--neutral-200); font-size:var(--text-sm); font-weight:600; color:var(--neutral-700); transition:all var(--dur-fast);}
+.pill[aria-pressed="true"], .pill:hover{background:var(--blue-mid); border-color:var(--blue-mid); color:#fff;}
+
+
+/* ============================================================
+   9. FORMS
+   ============================================================ */
+.field{margin-bottom:var(--space-5);}
+.field label{display:block; font-size:var(--text-sm); font-weight:700; color:var(--blue-deep); margin-bottom:var(--space-2);}
+.field .hint{font-size:var(--text-xs); color:var(--neutral-500); margin-top:var(--space-1);}
+.field input, .field textarea, .field select{width:100%; padding:13px 16px; font-family:var(--font-body); font-size:var(--text-base); border:1.5px solid var(--neutral-200); border-radius:var(--radius-md); background:var(--white); transition:border-color var(--dur-fast), box-shadow var(--dur-fast);}
+.field input:focus, .field textarea:focus, .field select:focus{border-color:var(--blue-mid); box-shadow:0 0 0 4px rgba(44,95,196,.12); outline:none;}
+.form-success{display:none; margin-top:var(--space-4); color:var(--success); font-weight:600; font-size:var(--text-sm);}
+#contactForm{display:grid; grid-template-columns:1fr 1fr; column-gap:var(--space-5);}
+#contactForm .field:nth-of-type(1),#contactForm .field:nth-of-type(2){grid-column:span 1;}
+#contactForm .field:nth-of-type(3),#contactForm .field:nth-of-type(4){grid-column:1/-1;}
+#contactForm button[type="submit"],#contactForm > p.hint{grid-column:1/-1;}
+@media (max-width:640px){#contactForm{grid-template-columns:1fr;} #contactForm .field{grid-column:1/-1;}}
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
+.site-footer{background:var(--ink); color:var(--cream); padding:var(--space-16) 0 var(--space-8);}
+.footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:var(--space-8);}
+.footer-grid .footer-heading{font-size:var(--text-sm); color:#fff; margin-bottom:var(--space-3); font-weight:700; font-family:var(--font-body);}
+.footer-grid ul{display:flex; flex-direction:column; gap:var(--space-2);}
+.footer-grid a{font-size:var(--text-sm); color:rgba(251,247,238,.8); transition:color var(--dur-fast);}
+.footer-grid a:hover{color:var(--gold-soft);}
+.footer-brand{font-family:var(--font-display); font-weight:700; font-size:1.3rem; margin-bottom:var(--space-3);}
+.footer-brand .h{color:#fff;} .footer-brand .a{color:var(--gold-soft);}
+.footer-bottom{margin-top:var(--space-8); padding-top:var(--space-6); border-top:1px solid rgba(255,255,255,.12); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-4); font-size:var(--text-xs); color:rgba(251,247,238,.5);}
+.footer-credit{display:inline-flex; align-items:center; gap:8px; font-size:var(--text-xs); color:rgba(251,247,238,.55); transition:color var(--dur-fast);}
+.footer-credit img{display:block; width:20px; height:20px; opacity:.85; transition:opacity var(--dur-fast);}
+.footer-credit:hover{color:var(--gold-soft);}
+.footer-credit:hover img{opacity:1;}
+@media (max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+
+/* ============================================================
+   11. MODAL (Gallery lightbox / Stories video player)
+   ============================================================ */
+.modal-overlay{position:fixed; inset:0; background:rgba(11,27,51,.78); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:var(--space-6); z-index:500; opacity:0; visibility:hidden; transition:opacity var(--dur-base) var(--ease);}
+.modal-overlay.open{opacity:1; visibility:visible;}
+.modal-dialog{background:var(--ink); border-radius:var(--radius-lg); max-width:900px; width:100%; max-height:90vh; overflow:auto; position:relative; box-shadow:var(--shadow-xl); transform:scale(.96); transition:transform var(--dur-base) var(--ease);}
+.modal-overlay.open .modal-dialog{transform:scale(1);}
+.modal-close{position:absolute; top:12px; right:12px; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.14); color:#fff; border:none; display:flex; align-items:center; justify-content:center; font-size:1.4rem; z-index:2; transition:background var(--dur-fast);}
+.modal-close:hover{background:rgba(255,255,255,.26);}
+.modal-media{width:100%; aspect-ratio:16/9; background:#000; display:flex; align-items:center; justify-content:center;}
+.modal-media img{width:100%; height:100%; object-fit:contain;}
+.modal-media iframe{width:100%; height:100%; border:none;}
+.modal-media.placeholder{flex-direction:column; gap:var(--space-3); color:rgba(251,247,238,.85); text-align:center; padding:var(--space-8);}
+.modal-body{padding:var(--space-6);}
+.modal-body h3{color:#fff; font-size:var(--text-xl);}
+.modal-body p{color:rgba(251,247,238,.8); font-size:var(--text-sm); margin-top:var(--space-2);}
+
+/* ============================================================
+   12. MISC (icons, teaser)
+   ============================================================ */
+.icon{width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round;}
+.teaser{background:var(--cream); padding:var(--space-24) var(--margin); text-align:center;}
+.teaser p{max-width:56ch; margin:0 auto; font-family:var(--font-display); font-weight:500; font-size:clamp(1.3rem,2vw,1.7rem); line-height:1.55; color:var(--blue-deep);}
+.teaser span{color:var(--gold-deep);}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     SKIP LINK
+     ============================================================ -->
+<a href="#main" class="skip-link">Langsung ke konten utama</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" id="mainNav" aria-label="Navigasi utama">
+  <a href="#home" class="brand" aria-label="HeriAyu — Beranda">
+    <img id="navLogo" class="brand-logo" width="368" height="120" alt="HeriAyu" fetchpriority="high" decoding="async">
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" data-nav="home">Beranda</a></li>
+    <li><a href="#about" data-nav="about">Tentang</a></li>
+    <li><a href="#characters" data-nav="characters">Karakter</a></li>
+    <li><a href="#stories" data-nav="stories">Cerita</a></li>
+    <li><a href="#gallery" data-nav="gallery">Galeri</a></li>
+    <li><a href="#join" data-nav="join" class="nav-cta">Ambil Bagian</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow on-dark">Dunia HeriAyu</span>
+      <h1>Petualangan Kecil, Hati Besar.</h1>
+      <p class="sub">Cerita pendek yang menghibur, menginspirasi, dan menemani setiap perjalanan tumbuh bersama keluarga.</p>
+      <div class="hero-ctas">
+        <a href="#stories" class="btn btn-primary btn-lg">Tonton Cerita</a>
+        <a href="#join" class="btn btn-ghost-dark btn-lg">Dukung HeriAyu</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="contact-shadow" aria-hidden="true"></div>
+      <img id="heroImg" width="726" height="956" alt="Heri dan Ayu, dua karakter animasi HeriAyu, berdiri lengkap dan melambaikan tangan" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="scroll-line"></span></div>
+</header>
+
+<section class="teaser">
+  <h2 class="sr-only">Filosofi cerita HeriAyu</h2>
+  <p>Setiap episode HeriAyu dibangun dari hal kecil yang dialami anak-anak sehari-hari, lalu diceritakan ulang dengan <span>kejujuran dan kehangatan</span> — bukan sekadar hiburan lewat.</p>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="section" id="about" aria-labelledby="about-heading">
+  <div class="container about-split reveal">
+    <div>
+      <span class="eyebrow">Tentang Kami</span>
+      <h2 id="about-heading" style="font-size:var(--text-4xl); margin-bottom:var(--space-4);">Dua anak, satu cara memandang dunia.</h2>
+      <p style="color:var(--neutral-700); margin-bottom:var(--space-4);">Heri ingin tahu segalanya dan sering bertindak dulu sebelum berpikir panjang. Ayu lebih tenang, memperhatikan detail yang orang lain lewatkan, dan biasanya jadi yang menenangkan situasi setelah Heri membuat kekacauan kecil.</p>
+      <p style="color:var(--neutral-700);">Setiap episode mengikuti keduanya menghadapi hal-hal yang juga dialami anak-anak nyata: rasa takut mencoba hal baru, berbagi, kehilangan sesuatu, atau belajar meminta maaf. Tidak ada solusi instan — hanya proses yang jujur.</p>
+    </div>
+    <div class="art"><img id="aboutImg" width="900" height="720" loading="lazy" alt="Heri membaca buku cerita di atas batu sementara Ayu berdiri di sampingnya"></div>
+  </div>
+
+  <div class="container reveal" style="margin-top:var(--space-10);">
+    <div class="mv-grid">
+      <div class="mv-card mission"><h3>Misi</h3><p>Membuat cerita pendek animasi yang bisa ditonton bersama keluarga, tanpa terasa menggurui, dan tetap relevan dengan keseharian anak Indonesia.</p></div>
+      <div class="mv-card"><h3>Visi</h3><p>Menjadi rumah cerita yang dipercaya orang tua dan sekolah sebagai tontonan yang aman, bermakna, dan layak ditonton ulang.</p></div>
+    </div>
+  </div>
+
+  <div class="container reveal" style="margin-top:var(--space-24);">
+    <div class="section-head centered">
+      <span class="eyebrow" style="justify-content:center;">Nilai yang Dipegang</span>
+      <h2>Empat hal yang tidak pernah kami tawar.</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="value-card"><div class="num">01</div><h3>Kejujuran</h3><p>Karakter boleh salah, takut, atau bingung — itu bagian dari cerita, bukan sesuatu yang disembunyikan.</p></div>
+      <div class="value-card"><div class="num">02</div><h3>Kehangatan</h3><p>Setiap episode terasa seperti didampingi, bukan diceramahi.</p></div>
+      <div class="value-card"><div class="num">03</div><h3>Kejelasan</h3><p>Cerita disampaikan sederhana, tanpa mengorbankan makna di dalamnya.</p></div>
+      <div class="value-card"><div class="num">04</div><h3>Konsistensi</h3><p>Kualitas produksi dan nada cerita dijaga sama dari episode pertama sampai seterusnya.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHARACTERS
+     ============================================================ -->
+<section class="section" id="characters" style="background:var(--cream-dim);" aria-labelledby="characters-heading">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="eyebrow" style="justify-content:center;">Karakter Utama</span>
+      <h2 id="characters-heading">Kenali dua sahabat yang selalu belajar, bertualang, dan tumbuh bersama.</h2>
+    </div>
+
+    <div class="char-showcase reveal">
+      <div class="char-card">
+        <div class="char-art"><div class="contact-shadow" aria-hidden="true"></div><img id="heriImg" width="427" height="929" loading="lazy" alt="Heri, karakter laki-laki HeriAyu, mengenakan hoodie biru dengan bintang kuning"></div>
+        <h3>Heri</h3>
+        <p>Rasa ingin tahunya besar — selalu yang pertama berani bergerak.</p>
+        <button type="button" class="btn btn-outline btn-md" onclick="openCharacterDetail('heri')">Lihat Detail</button>
+      </div>
+      <div class="char-card">
+        <div class="char-art"><div class="contact-shadow" aria-hidden="true"></div><img id="ayuImg" width="585" height="1371" loading="lazy" alt="Ayu, karakter perempuan HeriAyu, mengenakan hijab biru tua"></div>
+        <h3>Ayu</h3>
+        <p>Tenang dan teliti — selalu menemukan solusi saat keadaan jadi rumit.</p>
+        <button type="button" class="btn btn-outline btn-md" onclick="openCharacterDetail('ayu')">Lihat Detail</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STORIES
+     ============================================================ -->
+<section class="section" id="stories" aria-labelledby="stories-heading">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="eyebrow" style="justify-content:center;">Cerita</span>
+      <h2 id="stories-heading">Koleksi cerita HeriAyu di YouTube.</h2>
+      <p>Video sedang dalam produksi — jelajahi playlist yang sudah disiapkan dan kunjungi channel untuk update terbaru.</p>
+    </div>
+    <div class="grid grid-3 reveal" id="storiesGrid"></div>
+    <div class="reveal" style="text-align:center; margin-top:var(--space-10);">
+      <a href="https://www.youtube.com/@officialheriayu" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Kunjungi Channel YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section class="section" id="gallery" style="background:var(--cream-dim);" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <span class="eyebrow" style="justify-content:center;">Galeri</span>
+      <h2 id="gallery-heading">Jelajahi cerita berdasarkan kategori.</h2>
+      <p>Pilih kategori untuk melihat daftar cerita HeriAyu di dalamnya.</p>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SUPPORT
+     ============================================================ -->
+
+<!-- ============================================================
+     CARA BERPARTISIPASI — fully independent, self-contained section.
+     Everything below (style + markup + script) is namespaced under
+     "join-" and scoped inside #join, so it can be moved to any
+     position in the document, or deleted entirely, without touching or
+     breaking any other part of the site. It reads existing HeriAyu design
+     tokens (--ink, --gold, --font-display, --space-*, --radius-*, --shadow-*,
+     etc.) to stay visually consistent, but defines no global selectors,
+     no shared class names (.container/.card/.title/.button are never used),
+     and its own small reveal-on-scroll observer independent of the site's
+     existing .reveal/.js mechanism.
+     ============================================================ -->
+<style>
+  #join{padding:var(--space-24) 0; background:var(--cream); position:relative; overflow:hidden;}
+  #join .join-container{max-width:var(--container-max); margin:0 auto; padding:0 var(--margin);}
+
+  #join .join-eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:var(--text-xs); font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--blue-mid); margin-bottom:var(--space-4); justify-content:center; width:100%;}
+  #join .join-eyebrow::before{content:""; display:inline-block; width:22px; height:1px; background:var(--blue-mid); opacity:.6;}
+  #join .join-heading{font-family:var(--font-display); font-weight:700; font-size:var(--text-4xl); color:var(--ink); line-height:1.15;}
+  #join .join-lead{margin-top:var(--space-4); font-size:var(--text-lg); color:var(--neutral-700); line-height:1.7;}
+
+  /* Block 1 — Judul & pengantar, with companion illustration */
+  #join .join-intro{display:grid; grid-template-columns:1.2fr .8fr; gap:var(--space-12); align-items:start; margin-bottom:var(--space-24);}
+  #join .join-intro-text{align-self:center;}
+  #join .join-intro .join-heading{margin-bottom:var(--space-3);}
+  #join .join-intro-art{border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-lg); aspect-ratio:3/2; max-height:320px; background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));}
+  #join .join-intro-art img{width:100%; height:100%; object-fit:cover; object-position:50% 35%;}
+
+  /* Shared centered sub-heading, used for both "why" and "ways" blocks */
+  #join .join-subhead{max-width:60ch; margin:0 auto var(--space-10); text-align:center;}
+  #join .join-subheading{font-family:var(--font-display); font-weight:700; font-size:var(--text-3xl); color:var(--ink);}
+
+  /* Block 2 — Mengapa ikut berpartisipasi */
+  #join .join-reasons{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-6); margin-bottom:var(--space-24);}
+  #join .join-reason{text-align:center; padding:var(--space-6);}
+  #join .join-emoji{font-size:2.1rem; margin-bottom:var(--space-4); line-height:1;}
+  #join .join-reason h4{font-family:var(--font-display); font-weight:700; font-size:var(--text-lg); color:var(--ink); margin-bottom:var(--space-3);}
+  #join .join-reason p{color:var(--neutral-700); font-size:var(--text-sm); line-height:1.65;}
+
+  /* Block 3 — Cara-cara berpartisipasi */
+  #join .join-ways{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-6);}
+  #join .join-way{background:var(--white); border-radius:var(--radius-lg); padding:var(--space-8); border:1.5px solid var(--neutral-200); box-shadow:var(--shadow-sm); display:flex; flex-direction:column; transition:transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);}
+  #join .join-way:hover{transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:var(--sky-light);}
+  #join .join-way .join-emoji{font-size:2rem;}
+  #join .join-way h4{font-family:var(--font-display); font-weight:700; font-size:var(--text-xl); color:var(--ink); margin-bottom:var(--space-3);}
+  #join .join-way p{color:var(--neutral-700); font-size:var(--text-sm); line-height:1.65; flex:1; margin-bottom:var(--space-6);}
+  #join .join-way-btn{background:transparent; color:var(--blue-mid); border:1.5px solid var(--blue-mid); font-weight:700; font-size:var(--text-sm);
+    border-radius:var(--radius-full); padding:12px 22px; cursor:pointer; transition:background var(--dur-base) var(--ease), color var(--dur-base) var(--ease);}
+  #join .join-way-btn:hover{background:var(--blue-mid); color:#fff;}
+  #join .join-share-status{margin-top:var(--space-3); font-size:var(--text-xs); color:var(--success); font-weight:600; min-height:1.2em;}
+
+  /* Block 4 — CTA utama */
+  #join .join-cta-row{margin-top:var(--space-16); text-align:center; max-width:56ch; margin-left:auto; margin-right:auto;}
+  #join .join-closing-text{color:var(--neutral-700); font-size:var(--text-base); line-height:1.7; margin-bottom:var(--space-6);}
+  #join .join-cta{display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:700; font-size:var(--text-base);
+    border:none; white-space:nowrap; border-radius:var(--radius-full); padding:16px 34px; cursor:pointer; text-decoration:none;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%); color:var(--ink); box-shadow:var(--shadow-glow-gold);
+    transition:transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);}
+  #join .join-cta:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg);}
+  #join .join-cta:active{transform:translateY(0);}
+
+  #join .join-reveal{opacity:0; transform:translateY(20px); transition:opacity var(--dur-scroll) var(--ease), transform var(--dur-scroll) var(--ease);}
+  #join .join-reveal.join-is-visible{opacity:1; transform:translateY(0);}
+  #join .join-reasons.join-reveal .join-reason,
+  #join .join-ways.join-reveal .join-way{opacity:0; transform:translateY(20px); transition:opacity var(--dur-scroll) var(--ease), transform var(--dur-scroll) var(--ease);}
+  #join .join-reasons.join-reveal.join-is-visible .join-reason,
+  #join .join-ways.join-reveal.join-is-visible .join-way{opacity:1; transform:translateY(0);}
+  #join .join-reasons.join-reveal.join-is-visible .join-reason:nth-child(1),
+  #join .join-ways.join-reveal.join-is-visible .join-way:nth-child(1){transition-delay:.02s;}
+  #join .join-reasons.join-reveal.join-is-visible .join-reason:nth-child(2),
+  #join .join-ways.join-reveal.join-is-visible .join-way:nth-child(2){transition-delay:.1s;}
+  #join .join-reasons.join-reveal.join-is-visible .join-reason:nth-child(3),
+  #join .join-ways.join-reveal.join-is-visible .join-way:nth-child(3){transition-delay:.18s;}
+  #join .join-ways.join-reveal.join-is-visible .join-way:nth-child(4){transition-delay:.26s;}
+
+  @media (prefers-reduced-motion: reduce){
+    #join .join-reveal,
+    #join .join-reasons.join-reveal .join-reason,
+    #join .join-ways.join-reveal .join-way{opacity:1; transform:none; transition:none;}
+  }
+
+  @media (max-width:1024px){
+    #join .join-ways{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:880px){
+    #join{padding:var(--space-20) 0;}
+    #join .join-intro{grid-template-columns:1fr; gap:var(--space-8);}
+    #join .join-reasons{grid-template-columns:1fr; gap:var(--space-4); margin-bottom:var(--space-16);}
+  }
+  @media (max-width:640px){
+    #join .join-ways{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    #join .join-heading{font-size:var(--text-3xl);}
+    #join .join-subheading{font-size:var(--text-2xl);}
+    #join .join-way{padding:var(--space-6) var(--space-5) var(--space-5);}
+  }
+</style>
+
+<section id="join" aria-labelledby="join-heading">
+  <div class="join-container">
+
+    <div class="join-intro join-reveal">
+      <div class="join-intro-text">
+        <span class="join-eyebrow" style="justify-content:flex-start; width:auto;">Ambil Bagian</span>
+        <h2 id="join-heading" class="join-heading">Ambil Bagian dalam Perjalanan HeriAyu</h2>
+        <p class="join-lead">HeriAyu sedang membangun dunia cerita yang tumbuh bersama anak-anak Indonesia. Kami percaya setiap perjalanan besar selalu dibangun bersama banyak orang — apa pun peran Anda, selalu ada cara untuk ikut menjadi bagian dari perjalanan ini.</p>
+      </div>
+      <div class="join-intro-art">
+        <img id="participateImg" width="1000" height="666" loading="lazy" alt="Keluarga membaca bersama, Heri dan teman-teman menjelajahi buku cerita ajaib penuh imajinasi">
+      </div>
+    </div>
+
+    <div class="join-subhead join-reveal">
+      <span class="join-eyebrow">Mengapa Ikut Serta</span>
+      <h3 class="join-subheading">Mengapa Mengambil Bagian?</h3>
+    </div>
+    <div class="join-reasons join-reveal">
+      <div class="join-reason"><div class="join-emoji" aria-hidden="true">🌱</div><h4>Menumbuhkan Dampak Positif</h4><p>Setiap bentuk partisipasi membantu menghadirkan cerita yang aman, menyenangkan, dan bermakna bagi anak-anak.</p></div>
+      <div class="join-reason"><div class="join-emoji" aria-hidden="true">❤️</div><h4>Membangun Bersama</h4><p>HeriAyu percaya bahwa karya terbaik lahir dari kolaborasi banyak orang dengan tujuan yang sama.</p></div>
+      <div class="join-reason"><div class="join-emoji" aria-hidden="true">✨</div><h4>Menjadi Bagian Sejak Awal</h4><p>Perjalanan kami baru dimulai. Mereka yang bergabung hari ini akan menjadi bagian dari fondasi yang membentuk masa depan HeriAyu.</p></div>
+    </div>
+
+    <div class="join-subhead join-reveal">
+      <span class="join-eyebrow">Cara Berpartisipasi</span>
+      <h3 class="join-subheading">Setiap Peran Punya Tempatnya</h3>
+    </div>
+    <div class="join-ways join-reveal">
+      <div class="join-way">
+        <div class="join-emoji" aria-hidden="true">❤️</div>
+        <h4>Dukung HeriAyu</h4>
+        <p>Bantu kami menghadirkan lebih banyak cerita, ilustrasi, dan konten edukatif yang dapat dinikmati oleh anak-anak Indonesia.</p>
+        <button type="button" class="join-way-btn go-to-contact" data-subject="Dukungan">Dukung HeriAyu</button>
+      </div>
+      <div class="join-way">
+        <div class="join-emoji" aria-hidden="true">🤝</div>
+        <h4>Menjadi Mitra</h4>
+        <p>Kami terbuka untuk bekerja sama dengan UMKM, perusahaan, sekolah, organisasi, dan komunitas yang memiliki visi yang sejalan.</p>
+        <button type="button" class="join-way-btn go-to-contact" data-subject="Kemitraan / Kolaborasi">Diskusikan Kolaborasi</button>
+      </div>
+      <div class="join-way">
+        <div class="join-emoji" aria-hidden="true">💡</div>
+        <h4>Berkontribusi</h4>
+        <p>Apakah Anda seorang ilustrator, penulis, guru, kreator, atau memiliki keahlian yang dapat membantu? Kami senang membangun HeriAyu bersama.</p>
+        <button type="button" class="join-way-btn go-to-contact" data-subject="Kontribusi Ide">Kirim Ide</button>
+      </div>
+      <div class="join-way">
+        <div class="join-emoji" aria-hidden="true">📢</div>
+        <h4>Sebarkan Cerita</h4>
+        <p>Membagikan HeriAyu kepada keluarga dan teman juga merupakan bentuk dukungan yang sangat berarti bagi perjalanan kami.</p>
+        <button type="button" class="join-way-btn" id="shareBtn">Bagikan HeriAyu</button>
+      </div>
+    </div>
+    <p class="join-share-status sr-only" id="shareStatus" aria-live="polite"></p>
+
+    <div class="join-cta-row join-reveal">
+      <p class="join-closing-text">HeriAyu masih berada di awal perjalanan. Jika Anda percaya anak-anak Indonesia berhak mendapatkan lebih banyak cerita yang aman dan bermakna, mari mulai bersama.</p>
+      <a href="#contact" class="join-cta">Hubungi Tim HeriAyu</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('#join .join-reveal');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('join-is-visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('join-is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="container" style="max-width:720px; padding-left:clamp(24px,4vw,48px); padding-right:clamp(24px,4vw,48px);">
+    <div class="section-head centered reveal">
+      <span class="eyebrow" style="justify-content:center;">Kontak</span>
+      <h2 id="contact-heading">Ada pertanyaan atau ide kolaborasi?</h2>
+      <p>Tim HeriAyu membaca setiap pesan yang masuk. Email bisnis: hello.heriayu@gmail.com</p>
+    </div>
+    <form class="reveal" id="contactForm">
+      <div class="field"><label for="c-name">Nama Lengkap</label><input id="c-name" type="text" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" autocomplete="email" required></div>
+      <div class="field"><label for="c-subject">Subjek</label>
+        <select id="c-subject">
+          <option>Pertanyaan Umum</option><option>Dukungan</option><option>Kemitraan / Kolaborasi</option><option>Kontribusi Ide</option><option>Liputan Media</option><option>Lainnya</option>
+        </select>
+      </div>
+      <div class="field"><label for="c-message">Pesan</label><textarea id="c-message" rows="5" required></textarea></div>
+      <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+      <p class="hint" style="margin-top:var(--space-3);">Mengirim akan membuka aplikasi email Anda, ditujukan ke hello.heriayu@gmail.com.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="h">Heri</span><span class="a">Ayu</span></div>
+        <p style="font-size:var(--text-sm); color:rgba(251,247,238,.65); max-width:32ch;">Cerita pendek yang menemani keluarga tumbuh bersama.</p>
+      </div>
+      <div><h2 class="footer-heading">Jelajahi</h2><ul><li><a href="#about">Tentang</a></li><li><a href="#characters">Karakter</a></li><li><a href="#stories">Cerita</a></li></ul></div>
+      <div><h2 class="footer-heading">Komunitas</h2><ul><li><a href="#gallery">Galeri</a></li><li><a href="#join">Ambil Bagian</a></li></ul></div>
+      <div><h2 class="footer-heading">Kontak</h2><ul><li><a href="mailto:hello.heriayu@gmail.com">hello.heriayu@gmail.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HeriAyu. Seluruh hak cipta dilindungi.</span>
+      <a href="https://heriyanaqtink.com/" target="_blank" rel="noopener" class="footer-credit" aria-label="Dibuat oleh Heriyanaqtink — buka website pribadi di tab baru">
+        <img id="creatorLogo" width="24" height="24" alt="" aria-hidden="true">
+        <span>Dibuat oleh Heriyanaqtink</span>
+      </a>
+      <span>Kebijakan Privasi · Ketentuan Layanan</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ============ Hero image (base64, single self-contained file) ============ */
+  const HERO_SRC = "assets/hero.jpg";
+  /* Dedicated hero cutout: background genuinely removed (not masked) so the characters
+     sit directly in the page's own gradient instead of carrying a second, mismatched sky.
+     Other sections keep using the original wide artwork (HERO_SRC) — untouched. */
+  const HERO_BANNER_SRC = "assets/hero-banner.webp";
+  document.getElementById('heroImg').src = HERO_BANNER_SRC;
+  const NAV_LOGO_SRC = "assets/nav-logo.png";
+  document.getElementById('navLogo').src = NAV_LOGO_SRC;
+  const CREATOR_LOGO_SRC = "assets/creator-logo.png";
+  document.getElementById('creatorLogo').src = CREATOR_LOGO_SRC;
+
+  /* About card: tighter character-focused crop (same framing as hero, with sky/ocean kept —
+     this one sits inside a solid framed card, not composited onto the page background)
+     instead of the wide panorama, which was showing mostly empty sky in this 4:3 card. */
+  const ABOUT_SRC = "assets/about.jpg";
+  document.getElementById('aboutImg').src = ABOUT_SRC;
+  /* Character cards: now using the official production-ready transparent character
+     assets (full-body, clean isolation) instead of derived photo cutouts. */
+  const HERI_SOLO_SRC = "assets/heri-solo.webp";
+  const AYU_SOLO_SRC = "assets/ayu-solo.webp";
+  document.getElementById('heriImg').src = HERI_SOLO_SRC;
+  document.getElementById('ayuImg').src = AYU_SOLO_SRC;
+
+  const CHAR_DATA = {
+    heri: { role:'Peran: Penggerak Cerita', roleClass:'', name:'Heri', img:HERI_SOLO_SRC,
+      bio:'Rasa ingin tahunya besar dan jarang berpikir dua kali sebelum mencoba sesuatu. Heri sering jadi alasan sebuah episode dimulai — bukan karena dia pahlawan, tapi karena dia yang pertama berani bergerak.',
+      traits:['Berani mencoba','Ceroboh sesekali','Setia kawan','Mudah semangat'] },
+    ayu: { role:'Peran: Penyeimbang', roleClass:'gold', name:'Ayu', img:AYU_SOLO_SRC,
+      bio:'Memperhatikan detail yang orang lain lewatkan dan berpikir sebelum bertindak. Ayu bukan yang paling banyak bicara di antara mereka berdua, tapi biasanya dialah yang menemukan solusi setelah Heri membuat keadaan lebih rumit.',
+      traits:['Tenang','Teliti','Pendengar yang baik','Penyabar'] }
+  };
+  window.openCharacterDetail = function(key) {
+    const c = CHAR_DATA[key];
+    const traits = c.traits.map(t => `<span class="trait">${t}</span>`).join('');
+    HeriAyuModal.open(`
+      <div class="modal-media" style="background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid)); display:flex; align-items:flex-end; justify-content:center; padding:24px;">
+        <img src="${c.img}" alt="${c.name}" style="max-height:380px; width:auto;">
+      </div>
+      <div class="modal-body">
+        <span class="role-tag ${c.roleClass}">${c.role}</span>
+        <h3 id="modalTitle" style="margin-top:var(--space-3);">${c.name}</h3>
+        <p style="color:var(--neutral-700); margin-top:var(--space-3);">${c.bio}</p>
+        <div class="trait-list">${traits}</div>
+      </div>`, 'modalTitle');
+  };
+
+
+  /* ============ Nav: scroll state + mobile toggle ============ */
+  const nav = document.getElementById('mainNav');
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ============================================================
+     INTELLIGENT SECTION NAVIGATION ENGINE
+     Replaces default anchor jump / scrollIntoView with a destination
+     calculated from each section's actual visual anchor (heading +
+     primary content), compensated by the *live* navbar height, so
+     every destination lands as a complete, uncropped composition
+     instead of at an arbitrary section.offsetTop.
+     ============================================================ */
+  const NavEngine = (() => {
+    // Per-section visual anchor config. `heading` = must stay fully visible.
+    // `anchor` = primary visual content that should not be cropped when it fits.
+    // Sections not listed fall back to the section's own first heading.
+    // Per-section visual calibration. Every value below was tuned by visually
+    // reviewing each destination, not derived from arbitrary pixel guesses:
+    //   topPadding    — breathing space between navbar and heading (default 28)
+    //   bias          — how much of the leftover space (once content fits the
+    //                   viewport) is pushed above the heading vs. left below the
+    //                   anchor. 0.5 = centered. Higher = more air on top, tighter
+    //                   bottom edge (used where a following block must stay hidden).
+    //   maxBonus      — hard ceiling on the top-push, so short sections never look
+    //                   like they're floating in the middle of an empty screen.
+    //   minBottomGap  — smallest gap kept below the anchor when content fits.
+    //   priority      — 'bottom' means: if heading + anchor can't both fit, keep
+    //                   the anchor (the thing users must not see cropped) fully
+    //                   visible even if that trims the top breathing room.
+    //   bottomPadding — gap kept below the anchor when priority:'bottom' engages.
+    const CONFIG = {
+      home:       { top0: true },
+      about:      { heading: '#about-heading', anchor: '.about-split', topPadding: 40, bias: 0.6, maxBonus: 110 },
+      characters: { heading: '.section-head', anchor: '.char-card .btn', topPadding: 20, bias: 0.35, maxBonus: 64, priority: 'bottom', bottomPadding: 16, minTopPadding: 16 },
+      stories:    { heading: '#stories-heading', anchor: '#storiesGrid' },
+      gallery:    { heading: '#gallery-heading', anchor: '#galleryGrid' },
+      join:       { heading: '.join-intro', anchor: '.join-cta-row', topPadding: 28, bias: 0.5, maxBonus: 64 },
+      contact:    { heading: '#contact-heading', anchor: '#contactForm' }
+    };
+    const TOP_PADDING = 28;      // default breathing space below navbar
+    const MAX_CENTER_BONUS = 48; // default cap on the top-push nudge
+    const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function getNavHeight() {
+      const nav = document.getElementById('mainNav');
+      return nav ? nav.getBoundingClientRect().height : 0;
+    }
+
+    // Reads live layout once per call — no caching of stale measurements,
+    // so resizes, font swaps, image loads, or content-length changes are
+    // automatically reflected the next time a destination is computed.
+    function computeTarget(id) {
+      const section = document.getElementById(id);
+      if (!section) return null;
+      const cfg = CONFIG[id] || {};
+      if (cfg.top0) return 0;
+
+      const headingEl = (cfg.heading && section.querySelector(cfg.heading))
+        || section.querySelector('h1, h2') || section;
+      const anchorEl = (cfg.anchor && section.querySelector(cfg.anchor)) || headingEl;
+
+      const navH = getNavHeight();
+      const viewportH = window.innerHeight;
+      const docTop = window.scrollY || window.pageYOffset;
+
+      const headingTop = headingEl.getBoundingClientRect().top + docTop;
+      const anchorBottom = anchorEl.getBoundingClientRect().bottom + docTop;
+
+      const topPadding = cfg.topPadding ?? TOP_PADDING;
+      const bias = cfg.bias ?? 0.5;
+      const maxBonus = cfg.maxBonus ?? MAX_CENTER_BONUS;
+      const minBottomGap = cfg.minBottomGap ?? 16;
+
+      const availableBelow = viewportH - navH - topPadding;
+      const contentSpan = anchorBottom - headingTop;
+
+      let extraTop = 0;
+      if (contentSpan > 0 && contentSpan <= availableBelow) {
+        // Heading + primary content both fit: distribute the leftover space
+        // between top and bottom according to this section's bias instead of
+        // always splitting it 50/50, so sections that must stay self-contained
+        // (e.g. a hero with a following block right underneath) keep their
+        // bottom edge tight while sections that just feel cramped get more air.
+        const leftover = availableBelow - contentSpan;
+        const biased = leftover * bias;
+        const bottomSafe = Math.max(0, leftover - minBottomGap);
+        extraTop = Math.max(0, Math.min(maxBonus, biased, bottomSafe));
+      }
+
+      let target = headingTop - navH - topPadding - extraTop;
+
+      if (cfg.priority === 'bottom') {
+        // The anchor (e.g. character names) must never end up cropped at the
+        // bottom edge. If centering alone can't fit everything, favor showing
+        // the anchor in full, only trimming the top breathing room as a last
+        // resort — the heading itself never gets pushed under the navbar.
+        const bottomPadding = cfg.bottomPadding ?? 16;
+        const minTopPadding = cfg.minTopPadding ?? 8;
+        const bottomAnchorTarget = anchorBottom - viewportH + bottomPadding;
+        const topCeiling = headingTop - navH - minTopPadding;
+        if (bottomAnchorTarget > target) {
+          target = Math.min(bottomAnchorTarget, topCeiling);
+        }
+      }
+
+      // Universal safety floor: never land short of the section's own top edge.
+      // A large top-biased extraTop (e.g. support's bias:0.88, tuned to hide the
+      // section that comes AFTER) can, on short content, push target so low that
+      // the PREVIOUS section is still showing above the navbar instead. Scrolling
+      // to at least sectionTop-navH guarantees this section has fully started.
+      const sectionTop = section.getBoundingClientRect().top + docTop;
+      target = Math.max(target, sectionTop - navH);
+
+      const maxScroll = document.documentElement.scrollHeight - viewportH;
+      return Math.max(0, Math.min(target, Math.max(0, maxScroll)));
+    }
+
+    // Custom eased animation (slow start → natural acceleration → smooth
+    // deceleration). Cancel-safe: a new call always supersedes an in-flight one.
+    let rafId = null;
+    function easeInOutCubic(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function animateTo(targetY, onDone) {
+      if (rafId) cancelAnimationFrame(rafId);
+      const startY = window.scrollY || window.pageYOffset;
+      const distance = targetY - startY;
+      if (Math.abs(distance) < 2) { onDone && onDone(); return; }
+      if (reduceMotion()) { window.scrollTo(0, targetY); onDone && onDone(); return; }
+
+      const duration = Math.min(1000, Math.max(420, Math.abs(distance) * 0.6));
+      const start = performance.now();
+      function step(now) {
+        const t = Math.min(1, (now - start) / duration);
+        window.scrollTo(0, startY + distance * easeInOutCubic(t));
+        if (t < 1) { rafId = requestAnimationFrame(step); }
+        else { rafId = null; onDone && onDone(); }
+      }
+      rafId = requestAnimationFrame(step);
+    }
+
+    function focusForA11y(id) {
+      const section = document.getElementById(id);
+      if (!section) return;
+      const cfg = CONFIG[id] || {};
+      const target = (cfg.heading && section.querySelector(cfg.heading)) || section;
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }
+
+    function goTo(id, opts = {}) {
+      const target = computeTarget(id);
+      if (target === null) return;
+      animateTo(target, () => {
+        // Best-effort URL update. Some sandboxed preview contexts (e.g. viewing
+        // this file inside an iframe with a mismatched origin) block pushState
+        // with a SecurityError even though nothing is actually wrong — catching
+        // it just means the address bar hash won't update in that specific
+        // context, while scrolling/navigation itself keeps working normally.
+        if (history.pushState) {
+          try { history.pushState(null, '', '#' + id); } catch (e) { /* sandboxed context, ignore */ }
+        }
+        if (opts.focus !== false) focusForA11y(id);
+      });
+    }
+
+    // Cancel an in-flight animation on resize/orientation change rather than
+    // let it settle on a now-stale target; the user can re-select if needed.
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } }, 80);
+    });
+
+    return { goTo, computeTarget };
+  })();
+
+  // Intercept every in-page hash link (nav, footer, hero/section CTAs) except
+  // the skip-link, which must keep native instant jump-to-content behavior.
+  document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id || !document.getElementById(id)) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      NavEngine.goTo(id);
+    });
+  });
+
+  // Deep link on initial load: land instantly (no animation) on the same
+  // computed destination once the page's layout has settled.
+  if (location.hash) {
+    const initialId = location.hash.slice(1);
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => {
+        const target = NavEngine.computeTarget(initialId);
+        if (target !== null) window.scrollTo(0, target);
+      });
+    });
+  }
+
+
+  /* ============ Active nav link (scroll spy) ============ */
+  const navLinkEls = document.querySelectorAll('.nav-links a[data-nav]');
+  const sections = [...navLinkEls].map(a => document.getElementById(a.dataset.nav)).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinkEls.forEach(a => a.classList.toggle('active', a.dataset.nav === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => spy.observe(s));
+  }
+
+  /* ============ Scroll-reveal ============ */
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* ============ Accessible modal (Gallery lightbox / Stories video) ============ */
+  const HeriAyuModal = (() => {
+    let overlay, dialog, lastFocused;
+    function ensureOverlay() {
+      if (overlay) return;
+      overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      dialog = document.createElement('div');
+      dialog.className = 'modal-dialog';
+      dialog.setAttribute('role', 'dialog');
+      dialog.setAttribute('aria-modal', 'true');
+      overlay.appendChild(dialog);
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'Tab') trapFocus(e);
+      });
+    }
+    function trapFocus(e) {
+      const focusable = dialog.querySelectorAll('button, a[href], iframe, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+    function open(innerHTML, labelledbyId) {
+      ensureOverlay();
+      lastFocused = document.activeElement;
+      dialog.innerHTML = '<button class="modal-close" aria-label="Tutup">&times;</button>' + innerHTML;
+      if (labelledbyId) dialog.setAttribute('aria-labelledby', labelledbyId);
+      dialog.querySelector('.modal-close').addEventListener('click', close);
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => dialog.querySelector('.modal-close').focus());
+    }
+    function close() {
+      if (!overlay) return;
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      dialog.innerHTML = '';
+      if (lastFocused) lastFocused.focus();
+    }
+    return { open, close };
+  })();
+
+  /* ============ Stories: real playlist categories from the HeriAyu YouTube channel (videos in production) ============ */
+  const CHANNEL_URL = "https://www.youtube.com/@officialheriayu";
+    const PLAYLIST_IMG = [
+    "assets/playlist-petualangan.jpg",
+    "assets/playlist-misteri.jpg",
+    "assets/playlist-hewan.jpg",
+    "assets/playlist-lingkungan.jpg",
+    "assets/playlist-sains.jpg",
+    "assets/playlist-fenomena.jpg",
+    "assets/playlist-islami.jpg",
+  ];
+  const PLAYLISTS = [
+    {title:"Petualangan Heri & Ayu", available:true, desc:"Ikuti petualangan seru Heri & Ayu menjelajahi berbagai tempat, memecahkan misteri, dan menemukan hal-hal baru. Setiap cerita mengajarkan rasa ingin tahu, keberanian, dan kerja sama.", url:"https://www.youtube.com/playlist?list=PLDE7MJkzyopc"},
+    {title:"Misteri & Penemuan", available:true, desc:"Temukan berbagai misteri menarik dan penemuan seru bersama Heri & Ayu. Anak-anak diajak mengamati, berpikir, dan memecahkan teka-teki sambil belajar hal baru.", url:"https://www.youtube.com/playlist?list=PLK8c4gIYoGSk"},
+    {title:"Mengenal Hewan untuk Anak", available:true, desc:"Kenali berbagai jenis hewan bersama Heri & Ayu. Anak-anak akan belajar tentang hewan darat, hewan air, burung, serangga, dan habitatnya melalui cerita edukatif.", url:"https://www.youtube.com/playlist?list=PLYw7yQQzX2Cc"},
+    {title:"Alam & Lingkungan untuk Anak", available:true, desc:"Jelajahi keindahan alam bersama Heri & Ayu. Anak-anak akan belajar tentang hutan, pantai, sungai, tumbuhan, cuaca, dan cara menjaga lingkungan melalui cerita edukatif.", url:"https://www.youtube.com/playlist?list=PLfydLnBMDkS8"},
+    {title:"Eksperimen Sains untuk Anak", available:true, desc:"Belajar sains dengan cara yang seru bersama Heri & Ayu. Temukan berbagai eksperimen sederhana yang aman dan menyenangkan untuk membantu anak memahami dunia di sekitarnya.", url:"https://www.youtube.com/playlist?list=PLCLMpUGcKK3Y"},
+    {title:"Fenomena Alam untuk Anak", available:true, desc:"Mengapa langit berwarna biru? Dari mana datangnya hujan? Mengapa pelangi muncul setelah hujan? Temukan jawaban dari berbagai fenomena alam bersama Heri & Ayu.", url:"https://www.youtube.com/playlist?list=PLcqQSbxxe4ks"},
+    {title:"Cerita Islami untuk Anak", available:true, desc:"Kisah-kisah islami yang hangat dan penuh makna bersama Heri & Ayu. Anak-anak diajak mengenal akhlak baik, kisah teladan, dan nilai-nilai kebaikan melalui cerita yang mudah dipahami.", url:"https://www.youtube.com/playlist?list=PLQJvTj_z9Ens"},
+  ];
+  const storiesGrid = document.getElementById('storiesGrid');
+  storiesGrid.innerHTML = PLAYLISTS.map((p, i) => `
+    <button type="button" class="card" data-index="${i}" aria-label="Lihat playlist ${p.title}">
+      <div class="card-media" style="background-image:url('${PLAYLIST_IMG[i]}'); background-size:cover; background-position:center;"><span class="card-badge">Playlist</span><div class="card-play"><span aria-hidden="true">&#9658;</span></div></div>
+      <div class="card-body"><h3>${p.title}</h3><p>${p.desc}</p>
+        <div class="card-meta"><span>${p.available ? "Tonton sekarang" : "Video segera hadir"}</span><span>Lihat →</span></div>
+      </div>
+    </button>`).join('');
+  storiesGrid.querySelectorAll('.card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const p = PLAYLISTS[Number(btn.dataset.index)];
+      const media = p.available
+        ? `<div class="modal-media" style="background-image:url('${PLAYLIST_IMG[Number(btn.dataset.index)]}'); background-size:cover; background-position:center;"></div>`
+        : `<div class="modal-media placeholder"><svg class="icon" viewBox="0 0 24 24" width="40" height="40"><polygon points="6 3 20 12 6 21 6 3"/></svg><span>Video untuk playlist ini sedang diproduksi</span></div>`;
+      const ctaLabel = p.available ? "Tonton di YouTube" : "Lihat Playlist";
+      HeriAyuModal.open(`${media}<div class="modal-body"><h3 id="modalTitle">${p.title}</h3><p>${p.desc}</p><a href="${p.url}" target="_blank" rel="noopener" class="btn btn-outline btn-md" style="margin-top:var(--space-4);">${ctaLabel}</a></div>`, 'modalTitle');
+    });
+  });
+
+  /* ============ Gallery: category cards, each opens a modal with description + story list (single-file, no separate pages) ============ */
+    const CAT_IMG = {
+    petualangan: "assets/playlist-petualangan.jpg",
+    misteri: "assets/playlist-misteri.jpg",
+    hewan: "assets/playlist-hewan.jpg",
+    lingkungan: "assets/playlist-lingkungan.jpg",
+    sains: "assets/playlist-sains.jpg",
+    fenomena: "assets/playlist-fenomena.jpg",
+  };
+  const GALLERY = [
+    {slug:"petualangan", title:"Petualangan Heri & Ayu", desc:"Ikuti petualangan seru Heri & Ayu menjelajahi berbagai tempat, memecahkan misteri, dan menemukan hal-hal baru. Setiap cerita mengajarkan rasa ingin tahu, keberanian, dan kerja sama.",
+      stories:["Peta Harta Karun di Belakang Rumah","Jembatan Gantung yang Berderit","Mengikuti Jejak Tupai Merah","Perjalanan ke Air Terjun Tersembunyi","Tanda Panah di Persimpangan Jalan"]},
+    {slug:"misteri", title:"Misteri & Penemuan", desc:"Temukan berbagai misteri menarik dan penemuan seru bersama Heri & Ayu. Anak-anak diajak mengamati, berpikir, dan memecahkan teka-teki sambil belajar hal baru.",
+      stories:["Fosil Aneh di Halaman Sekolah","Peta Tua di Laci Kakek","Kristal Ungu yang Bersinar","Suara Misterius dari Loteng","Kompas yang Menunjuk Salah Arah"]},
+    {slug:"hewan", title:"Mengenal Hewan untuk Anak", desc:"Kenali berbagai jenis hewan bersama Heri & Ayu. Anak-anak akan belajar tentang hewan darat, hewan air, burung, serangga, dan habitatnya melalui cerita edukatif.",
+      stories:["Kura-Kura yang Sabar","Kenapa Jerapah Berleher Panjang?","Sahabat Baru, Anak Kucing","Burung Beo yang Pandai Bicara","Gajah yang Tidak Pernah Lupa"]},
+    {slug:"lingkungan", title:"Alam & Lingkungan untuk Anak", desc:"Jelajahi keindahan alam bersama Heri & Ayu. Anak-anak akan belajar tentang hutan, pantai, sungai, tumbuhan, cuaca, dan cara menjaga lingkungan melalui cerita edukatif.",
+      stories:["Menanam Pohon Pertama Kami","Kenapa Kita Harus Hemat Air?","Rumah Baru untuk Rusa Kecil","Sampah yang Bisa Jadi Berkah","Angin yang Menggerakkan Kincir"]},
+    {slug:"sains", title:"Eksperimen Sains untuk Anak", desc:"Belajar sains dengan cara yang seru bersama Heri & Ayu. Temukan berbagai eksperimen sederhana yang aman dan menyenangkan untuk membantu anak memahami dunia di sekitarnya.",
+      stories:["Gunung Berapi dari Baking Soda","Kenapa Air dan Minyak Tidak Menyatu?","Membuat Pelangi di Dalam Gelas","Telur yang Bisa Melayang","Mengapa Balon Bisa Meletus?"]},
+    {slug:"fenomena", title:"Fenomena Alam untuk Anak", desc:"Mengapa langit berwarna biru? Dari mana datangnya hujan? Mengapa pelangi muncul setelah hujan? Temukan jawaban dari berbagai fenomena alam bersama Heri & Ayu.",
+      stories:["Mengapa Awan Menjadi Hitam?","Dari Mana Petir Datang?","Gunung Berapi Marah","Mengapa Pelangi Muncul?","Mengapa Tsunami Terjadi?"]},
+  ];
+  const galleryGrid = document.getElementById('galleryGrid');
+  galleryGrid.innerHTML = GALLERY.map((g, i) => `
+    <button type="button" class="gallery-item" data-index="${i}" aria-label="Lihat kategori ${g.title}">
+      <img src="${CAT_IMG[g.slug]}" alt="${g.title}" loading="lazy" width="500" height="333">
+      <span class="tag">${g.title}</span>
+    </button>`).join('');
+
+  galleryGrid.querySelectorAll('.gallery-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const g = GALLERY[Number(btn.dataset.index)];
+      const storyList = g.stories.map(s => `<li>${s}</li>`).join('');
+      HeriAyuModal.open(`
+        <div class="modal-media"><img src="${CAT_IMG[g.slug]}" alt="${g.title}"></div>
+        <div class="modal-body">
+          <h3 id="modalTitle">${g.title}</h3>
+          <p>${g.desc}</p>
+          <p style="margin-top:var(--space-4); font-weight:700; color:#fff; font-size:var(--text-sm);">Daftar cerita di kategori ini:</p>
+          <ul style="margin-top:var(--space-2); padding-left:1.2em; color:rgba(251,247,238,.85); font-size:var(--text-sm); line-height:1.9; list-style:disc;">${storyList}</ul>
+          <p style="margin-top:var(--space-4); font-size:var(--text-xs); color:rgba(251,247,238,.6);">Cerita di atas sedang dalam produksi dan akan segera hadir satu per satu.</p>
+        </div>
+      `, 'modalTitle');
+    });
+  });
+
+  /* ============ Participate intro illustration (reuses the About photo — characters together, warm scene) ============ */
+  /* Participate section now uses its own dedicated illustration (previously shared with About). */
+  const PARTICIPATE_SRC = "assets/participate.jpg";
+  document.getElementById('participateImg').src = PARTICIPATE_SRC;
+
+  /* ============ "Ambil Bagian" buttons: jump to Contact and preselect the matching subject ============ */
+  document.querySelectorAll('.go-to-contact').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const subject = btn.dataset.subject;
+      const select = document.getElementById('c-subject');
+      if (subject) {
+        [...select.options].forEach(opt => { if (opt.value === subject) select.value = subject; });
+      }
+      NavEngine.goTo('contact', { focus: false });
+      document.getElementById('c-name').focus({ preventScroll: true });
+    });
+  });
+
+  /* ============ Share HeriAyu (native share sheet, clipboard fallback) ============ */
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    const shareData = { title: 'HeriAyu', text: 'Petualangan Kecil, Hati Besar — kenalan dengan Heri dan Ayu.', url: window.location.href };
+    const status = document.getElementById('shareStatus');
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(shareData.url);
+        status.textContent = 'Tautan disalin — siap dibagikan!';
+        status.classList.remove('sr-only');
+        setTimeout(() => status.classList.add('sr-only'), 4000);
+      }
+    } catch (err) { /* user cancelled share — no action needed */ }
+  });
+
+  /* ============ Contact form (mailto — no backend yet) ============ */
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('c-name').value;
+    const email = document.getElementById('c-email').value;
+    const subject = document.getElementById('c-subject').value;
+    const message = document.getElementById('c-message').value;
+    const body = `Nama: ${name}\nEmail: ${email}\n\n${message}`;
+    window.location.href = `mailto:hello.heriayu@gmail.com?subject=${encodeURIComponent('[HeriAyu] ' + subject)}&body=${encodeURIComponent(body)}`;
+  });
+
+});
+</script>
+</body>
+</html>
