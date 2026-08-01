@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="id" class="no-js">
 <head>
@@ -737,26 +738,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ============ Hero image (base64, single self-contained file) ============ */
-  const HERO_SRC = "assets/hero.jpg";
+  const HERO_SRC = "hero.jpg";
   /* Dedicated hero cutout: background genuinely removed (not masked) so the characters
      sit directly in the page's own gradient instead of carrying a second, mismatched sky.
      Other sections keep using the original wide artwork (HERO_SRC) — untouched. */
-  const HERO_BANNER_SRC = "assets/hero-banner.webp";
+  const HERO_BANNER_SRC = "hero-banner.webp";
   document.getElementById('heroImg').src = HERO_BANNER_SRC;
-  const NAV_LOGO_SRC = "assets/nav-logo.png";
+  const NAV_LOGO_SRC = "nav-logo.png";
   document.getElementById('navLogo').src = NAV_LOGO_SRC;
-  const CREATOR_LOGO_SRC = "assets/creator-logo.png";
+  const CREATOR_LOGO_SRC = "creator-logo.png";
   document.getElementById('creatorLogo').src = CREATOR_LOGO_SRC;
 
   /* About card: tighter character-focused crop (same framing as hero, with sky/ocean kept —
      this one sits inside a solid framed card, not composited onto the page background)
      instead of the wide panorama, which was showing mostly empty sky in this 4:3 card. */
-  const ABOUT_SRC = "assets/about.jpg";
+  const ABOUT_SRC = "about.jpg";
   document.getElementById('aboutImg').src = ABOUT_SRC;
   /* Character cards: now using the official production-ready transparent character
      assets (full-body, clean isolation) instead of derived photo cutouts. */
-  const HERI_SOLO_SRC = "assets/heri-solo.webp";
-  const AYU_SOLO_SRC = "assets/ayu-solo.webp";
+  const HERI_SOLO_SRC = "heri-solo.webp";
+  const AYU_SOLO_SRC = "ayu-solo.webp";
   document.getElementById('heriImg').src = HERI_SOLO_SRC;
   document.getElementById('ayuImg').src = AYU_SOLO_SRC;
 
@@ -1071,13 +1072,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============ Stories: real playlist categories from the HeriAyu YouTube channel (videos in production) ============ */
   const CHANNEL_URL = "https://www.youtube.com/@officialheriayu";
     const PLAYLIST_IMG = [
-    "assets/playlist-petualangan.jpg",
-    "assets/playlist-misteri.jpg",
-    "assets/playlist-hewan.jpg",
-    "assets/playlist-lingkungan.jpg",
-    "assets/playlist-sains.jpg",
-    "assets/playlist-fenomena.jpg",
-    "assets/playlist-islami.jpg",
+    "playlist-petualangan.jpg",
+    "playlist-misteri.jpg",
+    "playlist-hewan.jpg",
+    "playlist-lingkungan.jpg",
+    "playlist-sains.jpg",
+    "playlist-fenomena.jpg",
+    "playlist-islami.jpg",
   ];
   const PLAYLISTS = [
     {title:"Petualangan Heri & Ayu", available:true, desc:"Ikuti petualangan seru Heri & Ayu menjelajahi berbagai tempat, memecahkan misteri, dan menemukan hal-hal baru. Setiap cerita mengajarkan rasa ingin tahu, keberanian, dan kerja sama.", url:"https://www.youtube.com/playlist?list=PLDE7MJkzyopc"},
@@ -1109,12 +1110,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============ Gallery: category cards, each opens a modal with description + story list (single-file, no separate pages) ============ */
     const CAT_IMG = {
-    petualangan: "assets/playlist-petualangan.jpg",
-    misteri: "assets/playlist-misteri.jpg",
-    hewan: "assets/playlist-hewan.jpg",
-    lingkungan: "assets/playlist-lingkungan.jpg",
-    sains: "assets/playlist-sains.jpg",
-    fenomena: "assets/playlist-fenomena.jpg",
+    petualangan: "playlist-petualangan.jpg",
+    misteri: "playlist-misteri.jpg",
+    hewan: "playlist-hewan.jpg",
+    lingkungan: "playlist-lingkungan.jpg",
+    sains: "playlist-sains.jpg",
+    fenomena: "playlist-fenomena.jpg",
   };
   const GALLERY = [
     {slug:"petualangan", title:"Petualangan Heri & Ayu", desc:"Ikuti petualangan seru Heri & Ayu menjelajahi berbagai tempat, memecahkan misteri, dan menemukan hal-hal baru. Setiap cerita mengajarkan rasa ingin tahu, keberanian, dan kerja sama.",
@@ -1156,7 +1157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============ Participate intro illustration (reuses the About photo — characters together, warm scene) ============ */
   /* Participate section now uses its own dedicated illustration (previously shared with About). */
-  const PARTICIPATE_SRC = "assets/participate.jpg";
+  const PARTICIPATE_SRC = "participate.jpg";
   document.getElementById('participateImg').src = PARTICIPATE_SRC;
 
   /* ============ "Ambil Bagian" buttons: jump to Contact and preselect the matching subject ============ */
