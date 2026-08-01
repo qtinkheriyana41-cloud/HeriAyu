@@ -1116,6 +1116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lingkungan: "playlist-lingkungan.jpg",
     sains: "playlist-sains.jpg",
     fenomena: "playlist-fenomena.jpg",
+    islami: "playlist-islami.jpg",
   };
   const GALLERY = [
     {slug:"petualangan", title:"Petualangan Heri & Ayu", desc:"Ikuti petualangan seru Heri & Ayu menjelajahi berbagai tempat, memecahkan misteri, dan menemukan hal-hal baru. Setiap cerita mengajarkan rasa ingin tahu, keberanian, dan kerja sama.",
@@ -1130,6 +1131,8 @@ document.addEventListener('DOMContentLoaded', () => {
       stories:["Gunung Berapi dari Baking Soda","Kenapa Air dan Minyak Tidak Menyatu?","Membuat Pelangi di Dalam Gelas","Telur yang Bisa Melayang","Mengapa Balon Bisa Meletus?"]},
     {slug:"fenomena", title:"Fenomena Alam untuk Anak", desc:"Mengapa langit berwarna biru? Dari mana datangnya hujan? Mengapa pelangi muncul setelah hujan? Temukan jawaban dari berbagai fenomena alam bersama Heri & Ayu.",
       stories:["Mengapa Awan Menjadi Hitam?","Dari Mana Petir Datang?","Gunung Berapi Marah","Mengapa Pelangi Muncul?","Mengapa Tsunami Terjadi?"]},
+    {slug:"islami", title:"Cerita Islami untuk Anak", desc:"Kisah-kisah islami yang hangat dan penuh makna bersama Heri & Ayu. Anak-anak diajak mengenal akhlak baik, kisah teladan, dan nilai-nilai kebaikan melalui cerita yang mudah dipahami.",
+      stories:["Kejujuran Membawa Berkah","Kisah Nabi yang Penyabar","Berbagi dengan Sahabat","Doa Sebelum Tidur","Adab Bertamu yang Baik"]},
   ];
   const galleryGrid = document.getElementById('galleryGrid');
   galleryGrid.innerHTML = GALLERY.map((g, i) => `
